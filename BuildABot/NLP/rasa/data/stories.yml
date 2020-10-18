@@ -1,0 +1,91 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: introduce myself
+  steps:
+  - intent: greet_name
+    entities:
+    - name:"John"
+  - action: utter_greet_name
+
+- story: introduce friend with name
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: introduce_friend
+    entities:
+    - friend_name:"John"
+  - action: utter_welcome_friend
+  - intent: greet
+  - action: utter_greet
+
+- story: click on a switch
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: click_switch
+    entities:
+    - switch:"Front Fan"
+  - slot_was_set:
+    - switch: front fan
+  - action: utter_performing
+
+- story: interactive story 1
+  steps:
+  - intent: introduce_friend
+    entities:
+    - PERSON: Madhavan
+    - name: Madhavan
+  - slot_was_set:
+    - name: Madhavan
+  - action: utter_welcome_friend
+  - intent: click_switch
+    entities:
+    - switch: inner bulb
+  - slot_was_set:
+    - switch: inner bulb
+  - action: utter_performing
+
+- story: interactive story 2
+  steps:
+  - intent: greet_name
+    entities:
+    - PERSON: Madhavan
+    - name: Madhavan
+  - slot_was_set:
+    - name: Madhavan
+  - action: utter_greet_name
+  - intent: click_switch
+    entities:
+    - switch: plug
+  - slot_was_set:
+    - switch: plug
+  - action: utter_performing

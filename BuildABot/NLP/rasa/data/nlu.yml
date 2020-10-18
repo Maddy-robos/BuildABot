@@ -1,0 +1,141 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - Namaste
+    - Vandanam
+    - Vanakkam
+    - Satsriakal
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: introduce_friend
+  examples: |
+    - Meet Mr. [Karthik](friend_name)
+    - This is [Madhavan](friend_name)
+    - [Albert](friend_name) is here with me
+    - Say hello to [Rose](friend_name)
+    - I have [John](friend_name) with me
+    - Hi this is [Madhavan](name)
+- intent: greet_name
+  examples: |
+    - hey, I am [Karthik](name)
+    - hello, my name is [Madhavan](name)
+    - hi, myself [John](name)
+    - hello there, I am [Albert](name)
+    - good morning. This is [Rose](name)
+    - good evening. Call me [Suresh](name)
+    - moin. I'm [anondao](name)
+    - hey there, I am [Karthik](name)
+    - let's go, myself [John](name)
+    - hey dude, my name is [Madhavan](name)
+    - goodmorning. This is [Rachel](name)
+    - goodevening. Call me [Ross](name)
+    - good afternoon. I'm [Chandler](name)
+    - Hi this is [Madhavan](name)
+- intent: click_switch_on
+  examples: |
+    - Hey, can you please switch on the [front fan](switch) for me
+    - Switch on the [back fan](switch), please
+    - Will you turn on the [front light](switch), please?
+    - Would you be able to turn on the [back light](switch), please?
+    - Can you turn on the [inner bulb](switch) for me?
+    - Please switch on the [back fan](switch)
+    - Hey, can the [front fan](switch) be switched on, for me?
+    - Let the [back fan](switch) be switched on, please?
+    - Will the [front light](switch) be switched on, please?
+    - Would the [back light](switch) be switched on, please?
+    - Can the [inner bulb](switch) be switched on, please?
+    - Will you switch on the [plug](switch) for me?
+
+- intent: click_switch_off
+    - Hey, can you please switch off the [front fan](switch) for me
+    - Switch on the [back fan](switch), please
+    - Will you turn on the [front light](switch), please?
+    - Would you be able to turn on the [back light](switch), please?
+    - Can you turn on the [inner bulb](switch) for me?
+    - Please switch on the [back fan](switch)
+    - Hey, can the [front fan](switch) be switched on, for me?
+    - Let the [back fan](switch) be switched on, please?
+    - Will the [front light](switch) be switched on, please?
+    - Would the [back light](switch) be switched on, please?
+    - Can the [inner bulb](switch) be switched on, please?
+    - Will you switch on the [plug](switch) for me?

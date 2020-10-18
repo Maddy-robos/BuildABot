@@ -1,0 +1,50 @@
+2020-10-18 10:45:04,890 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2020-10-18 10:45:04,890 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-10-18 10:45:04,891 [DEBUG]  Using the default number of Sanic workers (1).
+2020-10-18 10:45:05,127 [DEBUG]  Extracted model to '/tmp/tmpsw447lk0'.
+2020-10-18 10:45:07,495 [INFO ]  Enabling coroutine debugging. Loop id 93856954412424.
+2020-10-18 10:45:07,713 [DEBUG]  Extracted model to '/tmp/tmpe7qb1n6e'.
+2020-10-18 10:45:12,789 [INFO ]  Added 'SpacyNLP' to component cache. Key 'SpacyNLP-en'.
+2020-10-18 10:45:12,790 [DEBUG]  Loading the model ...
+2020-10-18 10:45:13,022 [DEBUG]  Following metrics will be logged during training: 
+2020-10-18 10:45:13,023 [DEBUG]    t_loss (total loss)
+2020-10-18 10:45:13,023 [DEBUG]    i_acc (intent acc)
+2020-10-18 10:45:13,023 [DEBUG]    i_loss (intent loss)
+2020-10-18 10:45:13,023 [DEBUG]    e_f1 (entity f1)
+2020-10-18 10:45:13,023 [DEBUG]    e_loss (entity loss)
+2020-10-18 10:45:13,937 [DEBUG]  Finished loading the model.
+2020-10-18 10:45:13,938 [DEBUG]  Building tensorflow prediction graph...
+2020-10-18 10:45:18,762 [DEBUG]  Finished building tensorflow prediction graph.
+2020-10-18 10:45:18,769 [DEBUG]  Connected to InMemoryTrackerStore.
+2020-10-18 10:45:18,770 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2020-10-18 10:45:18,982 [DEBUG]  Extracted model to '/tmp/tmp4p9nf3e9'.
+2020-10-18 10:45:19,044 [DEBUG]  Loading the model ...
+2020-10-18 10:45:19,434 [DEBUG]  Finished loading the model.
+2020-10-18 10:45:19,436 [DEBUG]  Building tensorflow prediction graph...
+2020-10-18 10:45:20,783 [DEBUG]  Finished building tensorflow prediction graph.
+2020-10-18 10:45:20,785 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2020-10-18 10:45:20,785 [INFO ]  Rasa server is up and running.
+2020-10-18 10:45:52,747 [DEBUG]  Received user message 'Good Morning this is Madhavan' with intent '{'id': -8686613436025409589, 'name': 'greet_name', 'confidence': 0.9314667582511902}' and entities '[{'entity': 'TIME', 'value': 'Morning', 'start': 5, 'confidence': None, 'end': 12, 'extractor': 'SpacyEntityExtractor'}, {'entity': 'PERSON', 'value': 'Madhavan', 'start': 21, 'confidence': None, 'end': 29, 'extractor': 'SpacyEntityExtractor'}, {'entity': 'name', 'start': 21, 'end': 29, 'confidence_entity': 0.868768572807312, 'value': 'Madhavan', 'extractor': 'DIETClassifier'}]'
